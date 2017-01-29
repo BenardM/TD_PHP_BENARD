@@ -1,17 +1,15 @@
 {% set books_active = 1 %}
 {% extends 'layout.html.twig' %}
-
 {% block contents %}
 
 {% for book in books %}
-<a class="book" href="views/resumeBook.html.twig">
+
     {% if book.image %}
-        <img src="{{ app.request.basepath }}/uploads/{{ book.image }}_small.jpg" />
+        <img src="{{ app.request.basepath }}/uploads/{{ book.image }}big.jpg" />
     {% endif %}
     <span class="t">{{ book.titre }} </span><br>
     <em>{{ book.auteur }}</em><br/>
-Voir la fiche du film
-</a>
+
 
 {% endfor %}
 
